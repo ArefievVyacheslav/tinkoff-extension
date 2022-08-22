@@ -1,8 +1,10 @@
 {
-  "name":  "Organizer extension",  // Название расширения
-  "version": "1.0",  // Версия расширения.
-  "manifest_version": 3, // Версия манифеста
+  "name":  "Tinkoff",
+  "description": "Tinkoff Terminal",
+  "version": "0.0.1",
+  "manifest_version": 3,
   "permissions": ["storage", "activeTab", "scripting", "tabs", "notifications"],
+  "minimum_chrome_version": "93",
   "background": {
     "service_worker": "background.js",
     "type": "module"
