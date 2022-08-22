@@ -1,0 +1,23 @@
+{
+  "name":  "Organizer extension",  // Название расширения
+  "version": "1.0",  // Версия расширения.
+  "manifest_version": 3, // Версия манифеста
+  "permissions": ["storage", "activeTab", "scripting", "tabs", "notifications"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "host_permissions": [
+    "https://www.tinkoff.ru/terminal/"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.tinkoff.ru/terminal/"
+      ],
+      "js": [
+        "terminal.js"
+      ]
+    }
+  ]
+}
